@@ -26,6 +26,7 @@ struct Task {
 struct TaskKey {
     static let nameKey = "Name"
     static let descKey = "Description"
+    static let dateKey = "Date"
 }
 
 //Task class instance
@@ -33,20 +34,22 @@ class Task: NSObject, NSCoding {
     
     var name = "Name"
     var desc = "Description"
+    var date = "Date"
     
     
     
     
-    init(name: String, desc: String?) {
+    init(name: String, desc: String?, date: String?) {
         // Initialize stored properties.
         self.name = name
         self.desc = desc!
+        self.date = date!
         
         super.init()
         
         // Initialization should fail if there is no name or if the rating is negative.
         if name.isEmpty {
-            print("_Task init failed")
+            print("Task init failed")
             //return nil
         }
     }
@@ -58,15 +61,17 @@ class Task: NSObject, NSCoding {
         //add properties here
         aCoder.encodeObject(name, forKey: TaskKey.nameKey)
         aCoder.encodeObject(desc, forKey: TaskKey.descKey)
+        aCoder.encodeObject(date, forKey: TaskKey.dateKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         print("decoder--------------")
         let name = aDecoder.decodeObjectForKey(TaskKey.nameKey) as! String
         let desc = aDecoder.decodeObjectForKey(TaskKey.descKey) as? String
+        let date = aDecoder.decodeObjectForKey(TaskKey.dateKey) as? String
         
         // Must call designated initilizer.
-        self.init(name: name, desc: desc)
+        self.init(name: name, desc: desc, date: date)
     }
     
     
@@ -88,8 +93,8 @@ class TaskManager: NSObject {
     
     var tasks = [Task]()
     
-    func addTask(name: String, desc: String){
-        tasks.append(Task(name: name, desc: desc))
+    func addTask(name: String, desc: String, date: String){
+        tasks.append(Task(name: name, desc: desc, date: date))
     }
     
     

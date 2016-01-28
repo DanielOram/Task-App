@@ -10,22 +10,44 @@ import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
     
+    
+    var dateFormatter = NSDateFormatter()
+    
+    
     @IBOutlet var txtTaskName: UITextField!
     @IBOutlet var txtTaskDesc: UITextField!
+    @IBOutlet var labelTaskDate: UILabel!
     
     @IBOutlet var dateView: UIView!
+    
+    @IBOutlet var datePicker: UIDatePicker!
     
     @IBAction func btnOpenDateView(sender: UIButton){
         print("open dateview")
         dateView.hidden = false
     }
     
+    @IBAction func btnAddDate(sender: UIButton){
+        let strDate = dateFormatter.stringFromDate(datePicker.date)
+        labelTaskDate.text = strDate
+        print("beep")
+        dateView.hidden = true
+    }
+    
+    @IBAction func btnCancelDate(sender: UIButton){
+        dateView.hidden = true
+    }
+    
     @IBAction func btnAddTask(sender : UIButton){
         if (txtTaskName.text == ""){
             //Task Title is blank, do not add a record
         } else {
+            
+            let strDate = dateFormatter.stringFromDate(datePicker.date)
+            labelTaskDate.text = strDate
+            
             //add record
-            taskMgr.addTask(txtTaskName.text!, desc: txtTaskDesc.text!)
+            taskMgr.addTask(txtTaskName.text!, desc: txtTaskDesc.text!, date: strDate)
             print("task added")
             
             //save tasks
@@ -48,6 +70,15 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        //let dateFormatter = NSDateFormatter()
+        //let strDate = dateFormatter.stringFromDate(NSDate())
+        //labelTaskDate.text = strDate
     }
 
     override func didReceiveMemoryWarning() {
