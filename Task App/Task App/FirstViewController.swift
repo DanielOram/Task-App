@@ -17,6 +17,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view, typically from a nib.
         
         // Load any saved meals, otherwise load sample data.
+        print("first view loaded")
         if let savedTasks = taskMgr.loadTasks() {
             taskMgr.tasks = savedTasks
         } else {

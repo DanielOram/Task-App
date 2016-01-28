@@ -19,9 +19,11 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         } else {
             //add record
             taskMgr.addTask(txtTaskName.text!, desc: txtTaskDesc.text!)
+            print("task added")
             
             //save tasks
             taskMgr.saveTasks()
+            print("task saved to memory")
             
             //dismiss keyboard and reset fields
             

@@ -61,6 +61,7 @@ class Task: NSObject, NSCoding {
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
+        print("decoder--------------")
         let name = aDecoder.decodeObjectForKey(TaskKey.nameKey) as! String
         let desc = aDecoder.decodeObjectForKey(TaskKey.descKey) as? String
         
@@ -96,7 +97,8 @@ class TaskManager: NSObject {
     
     //Save task
     func saveTasks(){
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(taskMgr, toFile: TaskManager.ArchiveURL.path!)
+        print("save Tasks started")
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(tasks, toFile: TaskManager.ArchiveURL.path!)
         
         if !isSuccessfulSave {
             print("Failed to save meals...")
