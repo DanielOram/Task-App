@@ -12,16 +12,6 @@ var taskMgr = TaskManager()
 
 
 
-
-//MARK: task struct obselete
-/*
-struct Task {
-    var name = "Name"
-    var desc = "Description"
-    
-}
-*/
-
 //NSCoding keys
 struct TaskKey {
     static let nameKey = "Name"
@@ -65,7 +55,6 @@ class Task: NSObject, NSCoding {
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        print("decoder--------------")
         let name = aDecoder.decodeObjectForKey(TaskKey.nameKey) as! String
         let desc = aDecoder.decodeObjectForKey(TaskKey.descKey) as? String
         let date = aDecoder.decodeObjectForKey(TaskKey.dateKey) as? String
@@ -102,11 +91,10 @@ class TaskManager: NSObject {
     
     //Save task
     func saveTasks(){
-        print("save Tasks started")
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(tasks, toFile: TaskManager.ArchiveURL.path!)
         
         if !isSuccessfulSave {
-            print("Failed to save meals...")
+            print("Failed to save tasks...")
         }
     }
     
