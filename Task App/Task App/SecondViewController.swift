@@ -20,6 +20,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             //add record
             taskMgr.addTask(txtTaskName.text!, desc: txtTaskDesc.text!)
             
+            //save tasks
+            taskMgr.saveTasks()
+            
             //dismiss keyboard and reset fields
             
             self.view.endEditing(true)
@@ -30,6 +33,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+        
     //MARK: delegate functions
 
     override func viewDidLoad() {

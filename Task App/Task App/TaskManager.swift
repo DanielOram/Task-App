@@ -10,12 +10,17 @@ import UIKit
 
 var taskMgr = TaskManager()
 
-//MARK: task struct obselete 
+
+
+
+//MARK: task struct obselete
+/*
 struct Task {
     var name = "Name"
     var desc = "Description"
     
 }
+*/
 
 //NSCoding keys
 struct TaskKey {
@@ -24,14 +29,12 @@ struct TaskKey {
 }
 
 //Task class instance
-class _Task: NSObject, NSCoding {
+class Task: NSObject, NSCoding {
     
     var name = "Name"
     var desc = "Description"
     
-    //filepath in memory for storing data
-    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("tasks")
+    
     
     
     init(name: String, desc: String?) {
@@ -73,9 +76,36 @@ class _Task: NSObject, NSCoding {
 
 
 class TaskManager: NSObject {
+    
+    //filepath in memory for storing data
+    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("tasks")
+    
+    
+
+    
+    
     var tasks = [Task]()
     
     func addTask(name: String, desc: String){
         tasks.append(Task(name: name, desc: desc))
     }
+    
+    
+    //MARK: NSCoding
+    
+    //Save task
+    func saveTasks(){
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(taskMgr, toFile: TaskManager.ArchiveURL.path!)
+        
+        if !isSuccessfulSave {
+            print("Failed to save meals...")
+        }
+    }
+    
+    //load array of Tasks if there are any
+    func loadTasks() -> [Task]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(TaskManager.ArchiveURL.path!) as? [Task]
+    }
+
 }

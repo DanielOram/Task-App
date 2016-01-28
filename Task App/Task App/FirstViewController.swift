@@ -15,6 +15,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Load any saved meals, otherwise load sample data.
+        if let savedTasks = taskMgr.loadTasks() {
+            taskMgr.tasks = savedTasks
+        } else {
+            
+        }
+        
+        
         tasksTable.reloadData()
     }
 
@@ -40,6 +49,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if (editingStyle == UITableViewCellEditingStyle.Delete){
             
             taskMgr.tasks.removeAtIndex(indexPath.row)
+            
+            //save tasks
+            taskMgr.saveTasks()
+            
             tasksTable.reloadData()
         }
     }
