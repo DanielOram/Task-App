@@ -8,7 +8,29 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet var txtTaskName: UITextField!
+    @IBOutlet var txtTaskDesc: UITextField!
+    
+    @IBAction func btnAddTask(sender : UIButton){
+        if (txtTaskName.text == ""){
+            //Task Title is blank, do not add a record
+        } else {
+            //add record
+            taskMgr.addTask(txtTaskName.text!, desc: txtTaskDesc.text!)
+            
+            //dismiss keyboard and reset fields
+            
+            self.view.endEditing(true)
+            txtTaskName.text = nil
+            txtTaskDesc.text = nil
+            
+        }
+        
+    }
+    
+    //MARK: delegate functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +41,18 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //dismiss keyboard when user touches screen
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
 
 
 }
