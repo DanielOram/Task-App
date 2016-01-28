@@ -112,25 +112,45 @@
                                 <state key="normal" title="Add Date"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYw-7f-4BB" userLabel="DateView">
-                                <rect key="frame" x="20" y="91" width="560" height="452"/>
+                                <rect key="frame" x="20" y="20" width="560" height="523"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvI-V1-cMl" userLabel="Add Date">
-                                        <rect key="frame" x="8" y="405" width="93" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2J-0D-h1g" userLabel="Add Date">
+                                        <rect key="frame" x="257" y="279" width="48" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Cancel"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2J-0D-h1g" userLabel="Add Date">
-                                        <rect key="frame" x="490" y="405" width="62" height="48"/>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cXH-aK-mnz">
+                                        <rect key="frame" x="0.0" y="55" width="560" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="475688936.354864">
+                                            <!--2016-01-28 15:48:56 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6a-67-S8x">
+                                        <rect key="frame" x="192" y="8" width="177" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="VAZ-Q3-3cb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvI-V1-cMl" userLabel="Cancel Date">
+                                        <rect key="frame" x="253" y="335" width="55" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Add"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="K2J-0D-h1g" secondAttribute="trailing" constant="8" id="Hvy-Db-2Px"/>
-                                    <constraint firstItem="kvI-V1-cMl" firstAttribute="leading" secondItem="tYw-7f-4BB" secondAttribute="leading" constant="8" id="J3j-EO-Wri"/>
-                                    <constraint firstAttribute="bottom" secondItem="kvI-V1-cMl" secondAttribute="bottom" constant="-1" id="KVD-JD-fYL"/>
-                                    <constraint firstAttribute="bottom" secondItem="K2J-0D-h1g" secondAttribute="bottom" constant="-1" id="xpf-Jt-pGS"/>
+                                    <constraint firstAttribute="trailing" secondItem="cXH-aK-mnz" secondAttribute="trailing" id="57P-vA-Ery"/>
+                                    <constraint firstItem="B6a-67-S8x" firstAttribute="top" secondItem="tYw-7f-4BB" secondAttribute="topMargin" id="5YY-u7-KKw"/>
+                                    <constraint firstItem="cXH-aK-mnz" firstAttribute="leading" secondItem="tYw-7f-4BB" secondAttribute="leading" id="Iik-JZ-UDH"/>
+                                    <constraint firstItem="cXH-aK-mnz" firstAttribute="top" secondItem="B6a-67-S8x" secondAttribute="bottom" constant="8" id="W8Q-vx-O00"/>
+                                    <constraint firstItem="kvI-V1-cMl" firstAttribute="centerX" secondItem="tYw-7f-4BB" secondAttribute="centerX" id="Xiu-Qu-HfW"/>
+                                    <constraint firstItem="kvI-V1-cMl" firstAttribute="top" secondItem="K2J-0D-h1g" secondAttribute="bottom" constant="26" id="YKH-vl-PHL"/>
+                                    <constraint firstItem="K2J-0D-h1g" firstAttribute="top" secondItem="cXH-aK-mnz" secondAttribute="bottom" constant="8" id="dCf-EN-n5l"/>
+                                    <constraint firstItem="K2J-0D-h1g" firstAttribute="centerX" secondItem="tYw-7f-4BB" secondAttribute="centerX" constant="1" id="jFB-by-3il"/>
+                                    <constraint firstItem="B6a-67-S8x" firstAttribute="centerX" secondItem="cXH-aK-mnz" secondAttribute="centerX" id="p9m-ql-l6N"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -143,7 +163,7 @@
                             <constraint firstItem="yKz-ac-W6G" firstAttribute="top" secondItem="kwa-Sl-6iw" secondAttribute="top" id="Lqb-D6-g4o"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="tYw-7f-4BB" secondAttribute="bottom" constant="8" symbolic="YES" id="Os5-VF-AjL"/>
                             <constraint firstItem="yKz-ac-W6G" firstAttribute="baseline" secondItem="kwa-Sl-6iw" secondAttribute="firstBaseline" id="P7z-yu-Ouv"/>
-                            <constraint firstItem="tYw-7f-4BB" firstAttribute="top" secondItem="Jfk-Sg-pjV" secondAttribute="top" id="Wnw-zg-rnQ"/>
+                            <constraint firstItem="tYw-7f-4BB" firstAttribute="top" secondItem="Jfk-Sg-pjV" secondAttribute="top" constant="-71" id="Wnw-zg-rnQ"/>
                             <constraint firstItem="GJA-6K-dwJ" firstAttribute="leading" secondItem="Jfk-Sg-pjV" secondAttribute="leading" id="aT8-wA-xrG"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="Jfk-Sg-pjV" secondAttribute="centerX" id="d85-GT-0iv"/>
                             <constraint firstItem="GJA-6K-dwJ" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="etk-oI-bBI"/>
