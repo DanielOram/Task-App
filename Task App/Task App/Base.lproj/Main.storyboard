@@ -90,7 +90,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwa-Sl-6iw">
-                                <rect key="frame" x="514" y="300" width="66" height="48"/>
+                                <rect key="frame" x="267" y="480" width="66" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -183,10 +183,10 @@
                             <constraint firstItem="GJA-6K-dwJ" firstAttribute="trailing" secondItem="Jfk-Sg-pjV" secondAttribute="trailing" id="6xf-3C-DNJ"/>
                             <constraint firstItem="Jfk-Sg-pjV" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="AOr-Cr-H2a"/>
                             <constraint firstItem="Q7C-6c-Mr5" firstAttribute="top" secondItem="yKz-ac-W6G" secondAttribute="top" id="APf-9Q-Lnn"/>
-                            <constraint firstItem="kwa-Sl-6iw" firstAttribute="top" secondItem="GJA-6K-dwJ" secondAttribute="bottom" constant="115" id="Caw-79-6T3"/>
                             <constraint firstItem="tYw-7f-4BB" firstAttribute="leading" secondItem="GJA-6K-dwJ" secondAttribute="leading" id="DGi-DH-V3z"/>
                             <constraint firstItem="Q7C-6c-Mr5" firstAttribute="top" secondItem="GJA-6K-dwJ" secondAttribute="bottom" constant="15" id="HdI-ha-N7W"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="tYw-7f-4BB" secondAttribute="bottom" constant="8" symbolic="YES" id="Os5-VF-AjL"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="kwa-Sl-6iw" secondAttribute="bottom" constant="23" id="TQJ-e1-6zB"/>
                             <constraint firstItem="GJA-6K-dwJ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="TzQ-qk-MU1"/>
                             <constraint firstItem="tYw-7f-4BB" firstAttribute="top" secondItem="Jfk-Sg-pjV" secondAttribute="top" constant="-78" id="Wnw-zg-rnQ"/>
                             <constraint firstItem="GJA-6K-dwJ" firstAttribute="top" secondItem="5AX-p0-wDT" secondAttribute="bottom" constant="2" id="XM6-24-vf4"/>
@@ -197,8 +197,8 @@
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="giG-8e-Jcr"/>
                             <constraint firstItem="Q7C-6c-Mr5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="120" id="hsT-Yq-hCf"/>
                             <constraint firstItem="tYw-7f-4BB" firstAttribute="trailing" secondItem="Jfk-Sg-pjV" secondAttribute="trailing" id="oI2-MN-axr"/>
+                            <constraint firstItem="kwa-Sl-6iw" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="oLI-gT-2sE"/>
                             <constraint firstItem="5AX-p0-wDT" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="ppO-Hf-MOA"/>
-                            <constraint firstItem="kwa-Sl-6iw" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="tbX-Hv-sN0"/>
                             <constraint firstItem="GJA-6K-dwJ" firstAttribute="top" secondItem="Jfk-Sg-pjV" secondAttribute="bottom" constant="27" id="woy-G0-Qp4"/>
                             <constraint firstItem="Jfk-Sg-pjV" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="36" id="wvJ-zN-2ab"/>
                         </constraints>
