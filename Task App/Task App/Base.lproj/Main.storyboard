@@ -59,7 +59,7 @@
         <!--Date Picker Scene-->
         <scene sceneID="Kxf-Hq-37N">
             <objects>
-                <viewController id="Oze-QF-F1s" userLabel="Date Picker Scene" sceneMemberID="viewController">
+                <viewController id="Oze-QF-F1s" userLabel="Date Picker Scene" customClass="DatePickerViewController" customModule="Task_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N6b-JY-Up0"/>
                         <viewControllerLayoutGuide type="bottom" id="EHU-In-Rrc"/>
@@ -77,28 +77,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ler-RV-YVw" firstAttribute="centerY" secondItem="rEh-z5-wid" secondAttribute="centerY" id="QQV-b5-pjF"/>
-                            <constraint firstAttribute="trailing" secondItem="Ler-RV-YVw" secondAttribute="trailing" id="SMT-mh-tUu"/>
-                            <constraint firstItem="Ler-RV-YVw" firstAttribute="leading" secondItem="rEh-z5-wid" secondAttribute="leading" id="vJM-Jp-gOL"/>
+                            <constraint firstAttribute="trailing" secondItem="Ler-RV-YVw" secondAttribute="trailing" id="IdA-wx-J2v"/>
+                            <constraint firstItem="Ler-RV-YVw" firstAttribute="centerY" secondItem="rEh-z5-wid" secondAttribute="centerY" id="bfO-OG-Nnf"/>
+                            <constraint firstItem="Ler-RV-YVw" firstAttribute="leading" secondItem="rEh-z5-wid" secondAttribute="leading" id="iag-yb-UMl"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Select Date" id="aS4-fE-wjy">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="JH3-rA-XL6">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="JH3-rA-XL6"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Date" id="OpZ-wQ-vwu">
                             <connections>
-                                <segue destination="8rJ-Kc-sve" kind="presentation" id="bH7-F2-DgT"/>
+                                <action selector="addDateBtnPressed:" destination="Oze-QF-F1s" id="TlL-RT-dCJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add Date" id="OpZ-wQ-vwu"/>
                         <connections>
                             <outlet property="backBarButtonItem" destination="JH3-rA-XL6" id="fNf-Qz-E5g"/>
                         </connections>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="datePicker" destination="Ler-RV-YVw" id="a6a-PH-rpY"/>
+                        <outlet property="view" destination="rEh-z5-wid" id="TXh-yc-20n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbj-to-6jS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600" y="1116"/>
+            <point key="canvasLocation" x="1697" y="1111"/>
         </scene>
         <!--Add Task-->
         <scene sceneID="wg7-f3-ORb">
@@ -229,7 +233,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="bH7-F2-DgT"/>
-    </inferredMetricsTieBreakers>
 </document>

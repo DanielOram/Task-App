@@ -16,6 +16,7 @@
 		EF33C3A61C59EDD700B06CE9 /* Task_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF33C3A51C59EDD700B06CE9 /* Task_AppTests.swift */; };
 		EF33C3B11C59EDD800B06CE9 /* Task_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF33C3B01C59EDD800B06CE9 /* Task_AppUITests.swift */; };
 		EF33C3BF1C59F15D00B06CE9 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF33C3BE1C59F15C00B06CE9 /* TaskManager.swift */; };
+		EFCE9D221C5A5AD400455E92 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCE9D211C5A5AD400455E92 /* DatePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EF33C3B01C59EDD800B06CE9 /* Task_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_AppUITests.swift; sourceTree = "<group>"; };
 		EF33C3B21C59EDD800B06CE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF33C3BE1C59F15C00B06CE9 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		EFCE9D211C5A5AD400455E92 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				EF33C38E1C59EDD700B06CE9 /* AppDelegate.swift */,
 				EF33C3901C59EDD700B06CE9 /* FirstViewController.swift */,
 				EF33C3921C59EDD700B06CE9 /* SecondViewController.swift */,
+				EFCE9D211C5A5AD400455E92 /* DatePickerViewController.swift */,
 				EF33C3941C59EDD700B06CE9 /* Main.storyboard */,
 				EF33C3971C59EDD700B06CE9 /* Assets.xcassets */,
 				EF33C3991C59EDD700B06CE9 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF33C3931C59EDD700B06CE9 /* SecondViewController.swift in Sources */,
+				EFCE9D221C5A5AD400455E92 /* DatePickerViewController.swift in Sources */,
 				EF33C38F1C59EDD700B06CE9 /* AppDelegate.swift in Sources */,
 				EF33C3BF1C59F15D00B06CE9 /* TaskManager.swift in Sources */,
 				EF33C3911C59EDD700B06CE9 /* FirstViewController.swift in Sources */,
