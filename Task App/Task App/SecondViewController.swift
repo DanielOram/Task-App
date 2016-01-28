@@ -13,6 +13,13 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var txtTaskName: UITextField!
     @IBOutlet var txtTaskDesc: UITextField!
     
+    @IBOutlet var dateView: UIView!
+    
+    @IBAction func btnOpenDateView(sender: UIButton){
+        print("open dateview")
+        dateView.hidden = false
+    }
+    
     @IBAction func btnAddTask(sender : UIButton){
         if (txtTaskName.text == ""){
             //Task Title is blank, do not add a record

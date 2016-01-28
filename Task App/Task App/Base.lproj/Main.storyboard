@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -62,7 +64,7 @@
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW" userLabel="Default View">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -81,18 +83,6 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="woB-mp-dOS"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwa-Sl-6iw">
-                                <rect key="frame" x="493" y="203" width="87" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="87" id="B4o-yD-27f"/>
-                                    <constraint firstAttribute="height" constant="30" id="tII-D8-kcm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="btnAddTask:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="9dj-os-8dp"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GJA-6K-dwJ">
                                 <rect key="frame" x="20" y="155" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -101,31 +91,84 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="W3P-y5-yXd"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwa-Sl-6iw">
+                                <rect key="frame" x="492" y="200" width="88" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="bjN-jP-zy4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnAddTask:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="9dj-os-8dp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKz-ac-W6G">
+                                <rect key="frame" x="20" y="200" width="134" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="d18-fB-d6e"/>
+                                    <constraint firstAttribute="height" constant="30" id="xDi-RL-Gi4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Add Date"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYw-7f-4BB" userLabel="DateView">
+                                <rect key="frame" x="20" y="293" width="560" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2J-0D-h1g" userLabel="Add Date">
+                                        <rect key="frame" x="490" y="203" width="62" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="WeG-4P-lxE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Add"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvI-V1-cMl" userLabel="Add Date">
+                                        <rect key="frame" x="8" y="203" width="93" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="K2J-0D-h1g" secondAttribute="bottom" constant="-1" id="JHL-jW-zfH"/>
+                                    <constraint firstItem="kvI-V1-cMl" firstAttribute="leading" secondItem="tYw-7f-4BB" secondAttribute="leadingMargin" id="Jdl-VR-V1C"/>
+                                    <constraint firstItem="K2J-0D-h1g" firstAttribute="baseline" secondItem="kvI-V1-cMl" secondAttribute="baseline" id="ces-f8-DUk"/>
+                                    <constraint firstItem="K2J-0D-h1g" firstAttribute="trailing" secondItem="tYw-7f-4BB" secondAttribute="trailingMargin" id="h40-fr-gjO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jfk-Sg-pjV" firstAttribute="trailing" secondItem="GJA-6K-dwJ" secondAttribute="trailing" id="Aut-oi-H85"/>
-                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="Kzo-pw-ME4"/>
-                            <constraint firstItem="Jfk-Sg-pjV" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="29" id="O7S-NK-u7v"/>
-                            <constraint firstItem="kwa-Sl-6iw" firstAttribute="top" secondItem="GJA-6K-dwJ" secondAttribute="bottom" constant="18" id="R9J-8m-6l0"/>
-                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="leading" secondItem="Jfk-Sg-pjV" secondAttribute="leading" id="Xnd-cB-Lzt"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="jPX-9n-ayr"/>
-                            <constraint firstItem="Jfk-Sg-pjV" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="lGv-Ze-3df"/>
-                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="trailing" secondItem="kwa-Sl-6iw" secondAttribute="trailing" id="xwD-k3-bJ5"/>
-                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="top" secondItem="Jfk-Sg-pjV" secondAttribute="bottom" constant="34" id="zaQ-3H-CLF"/>
-                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="zkL-Q7-fW1"/>
+                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="trailing" secondItem="kwa-Sl-6iw" secondAttribute="trailing" id="3PW-ps-49Y"/>
+                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="trailing" secondItem="Jfk-Sg-pjV" secondAttribute="trailing" id="6xf-3C-DNJ"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="tYw-7f-4BB" secondAttribute="bottom" constant="8" id="CDo-Xu-r8O"/>
+                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="leading" secondItem="yKz-ac-W6G" secondAttribute="leading" id="ETO-zr-dVW"/>
+                            <constraint firstItem="tYw-7f-4BB" firstAttribute="trailing" secondItem="kwa-Sl-6iw" secondAttribute="trailing" id="JdM-Pa-S9i"/>
+                            <constraint firstItem="yKz-ac-W6G" firstAttribute="top" secondItem="kwa-Sl-6iw" secondAttribute="top" id="Lqb-D6-g4o"/>
+                            <constraint firstItem="yKz-ac-W6G" firstAttribute="baseline" secondItem="kwa-Sl-6iw" secondAttribute="firstBaseline" id="P7z-yu-Ouv"/>
+                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="leading" secondItem="Jfk-Sg-pjV" secondAttribute="leading" id="aT8-wA-xrG"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="Jfk-Sg-pjV" secondAttribute="centerX" id="d85-GT-0iv"/>
+                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="etk-oI-bBI"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="giG-8e-Jcr"/>
+                            <constraint firstItem="tYw-7f-4BB" firstAttribute="top" secondItem="yKz-ac-W6G" secondAttribute="top" constant="93" id="oo1-TK-lPg"/>
+                            <constraint firstItem="yKz-ac-W6G" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="pRj-xg-O5d"/>
+                            <constraint firstItem="tYw-7f-4BB" firstAttribute="leading" secondItem="yKz-ac-W6G" secondAttribute="leading" id="pb7-rU-vBD"/>
+                            <constraint firstItem="yKz-ac-W6G" firstAttribute="top" secondItem="GJA-6K-dwJ" secondAttribute="bottom" constant="15" id="qLC-zn-0Nl"/>
+                            <constraint firstItem="kwa-Sl-6iw" firstAttribute="baseline" secondItem="yKz-ac-W6G" secondAttribute="firstBaseline" id="tm7-Ad-bza"/>
+                            <constraint firstItem="GJA-6K-dwJ" firstAttribute="top" secondItem="Jfk-Sg-pjV" secondAttribute="bottom" constant="34" id="woy-G0-Qp4"/>
+                            <constraint firstItem="Jfk-Sg-pjV" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="29" id="wvJ-zN-2ab"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Task" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="dateView" destination="tYw-7f-4BB" id="5an-xL-CiP"/>
                         <outlet property="txtTaskDesc" destination="GJA-6K-dwJ" id="XMy-bC-3lS"/>
                         <outlet property="txtTaskName" destination="Jfk-Sg-pjV" id="eg5-S4-DCJ"/>
-                        <outlet property="view" destination="QS5-Rx-YEW" id="wSv-os-cvP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="788" y="386"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
