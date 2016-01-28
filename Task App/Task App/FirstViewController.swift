@@ -25,13 +25,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     //MARK: tableview delegates
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        print(taskMgr.tasks.count)
         return taskMgr.tasks.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Default Tasks")
-        print(taskMgr.tasks[indexPath.row].name)
         cell.textLabel?.text = taskMgr.tasks[indexPath.row].name
         cell.detailTextLabel?.text = taskMgr.tasks[indexPath.row].desc
         
