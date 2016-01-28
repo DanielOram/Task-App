@@ -402,6 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Task App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Danoram.Task-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,6 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Task App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Danoram.Task-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,6 +488,7 @@
 				EF33C3B71C59EDD800B06CE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF33C3B81C59EDD800B06CE9 /* Build configuration list for PBXNativeTarget "Task AppTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +497,7 @@
 				EF33C3BA1C59EDD800B06CE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF33C3BB1C59EDD800B06CE9 /* Build configuration list for PBXNativeTarget "Task AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +506,7 @@
 				EF33C3BD1C59EDD800B06CE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
