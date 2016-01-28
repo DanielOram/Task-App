@@ -43,11 +43,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             //Task Title is blank, do not add a record
         } else {
             
-            let strDate = dateFormatter.stringFromDate(datePicker.date)
-            labelTaskDate.text = strDate
             
             //add record
-            taskMgr.addTask(txtTaskName.text!, desc: txtTaskDesc.text!, date: strDate)
+            taskMgr.addTask(txtTaskName.text!, desc: txtTaskDesc.text!, date: labelTaskDate.text!)
             print("task added")
             
             //save tasks
