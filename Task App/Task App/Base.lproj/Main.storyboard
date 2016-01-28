@@ -44,7 +44,7 @@
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="sQ3-2i-ymF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Task List" image="Checklist Filled-50" selectedImage="Note-50" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Task List" image="first" selectedImage="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tasksTable" destination="v4D-Uy-4Pr" id="jKs-0B-Igr"/>
                         <outlet property="view" destination="tsR-hK-woN" id="e7S-Ji-1Jt"/>
@@ -203,7 +203,7 @@
                             <constraint firstItem="Jfk-Sg-pjV" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="36" id="wvJ-zN-2ab"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Task" image="Note-50" selectedImage="Note-50" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Add Task" image="second" selectedImage="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="datePicker" destination="cXH-aK-mnz" id="cts-Ae-HVY"/>
                         <outlet property="dateView" destination="tYw-7f-4BB" id="UtB-fe-Rmf"/>
@@ -237,7 +237,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Checklist Filled-50" width="0.0" height="0.0"/>
-        <image name="Note-50" width="0.0" height="0.0"/>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
     </resources>
 </document>
