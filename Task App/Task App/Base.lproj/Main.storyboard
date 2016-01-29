@@ -203,7 +203,9 @@
                             <constraint firstItem="Jfk-Sg-pjV" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="36" id="wvJ-zN-2ab"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Task" image="Edit" selectedImage="Edit" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Add Task" image="Edit" selectedImage="Edit" id="cPa-gy-q4n">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="1"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="datePicker" destination="cXH-aK-mnz" id="cts-Ae-HVY"/>
                         <outlet property="dateView" destination="tYw-7f-4BB" id="UtB-fe-Rmf"/>
@@ -238,6 +240,6 @@
     </scenes>
     <resources>
         <image name="Calendar" width="36" height="36"/>
-        <image name="Edit" width="39" height="39"/>
+        <image name="Edit" width="48" height="48"/>
     </resources>
 </document>

@@ -40,6 +40,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func btnAddTask(sender : UIButton){
         if (txtTaskName.text == ""){
+            txtTaskName.attributedPlaceholder = NSAttributedString(string:"Please Enter a Name for the Task",
+                attributes:[NSForegroundColorAttributeName: UIColor.redColor()])
             //Task Title is blank, do not add a record
         } else {
             
@@ -57,6 +59,10 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             self.view.endEditing(true)
             txtTaskName.text = nil
             txtTaskDesc.text = nil
+            txtTaskName.attributedPlaceholder = NSAttributedString(string:"New Task",
+                attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
+            txtTaskDesc.attributedPlaceholder = NSAttributedString(string:"Task Description",
+                attributes:[NSForegroundColorAttributeName: UIColor.grayColor()])
             
         }
         
