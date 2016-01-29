@@ -44,7 +44,7 @@
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="sQ3-2i-ymF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Task List" image="first" selectedImage="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Task List" image="Calendar" selectedImage="Calendar" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tasksTable" destination="v4D-Uy-4Pr" id="jKs-0B-Igr"/>
                         <outlet property="view" destination="tsR-hK-woN" id="e7S-Ji-1Jt"/>
@@ -115,6 +115,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-Yl-YbG" userLabel="Name Label">
+                                <rect key="frame" x="20" y="75" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AX-p0-wDT" userLabel="Description Label">
+                                <rect key="frame" x="20" y="132" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYw-7f-4BB" userLabel="DateView">
                                 <rect key="frame" x="20" y="20" width="560" height="523"/>
                                 <subviews>
@@ -163,18 +175,6 @@
                                     <constraint firstItem="B6a-67-S8x" firstAttribute="centerX" secondItem="cXH-aK-mnz" secondAttribute="centerX" id="p9m-ql-l6N"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-Yl-YbG" userLabel="Name Label">
-                                <rect key="frame" x="20" y="75" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AX-p0-wDT" userLabel="Description Label">
-                                <rect key="frame" x="20" y="132" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -203,7 +203,7 @@
                             <constraint firstItem="Jfk-Sg-pjV" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="36" id="wvJ-zN-2ab"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Task" image="second" selectedImage="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Add Task" image="Edit" selectedImage="Edit" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="datePicker" destination="cXH-aK-mnz" id="cts-Ae-HVY"/>
                         <outlet property="dateView" destination="tYw-7f-4BB" id="UtB-fe-Rmf"/>
@@ -237,7 +237,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="Calendar" width="36" height="36"/>
+        <image name="Edit" width="39" height="39"/>
     </resources>
 </document>

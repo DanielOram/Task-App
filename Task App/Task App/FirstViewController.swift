@@ -41,14 +41,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Default Tasks")
         
-        let taskName = taskMgr.tasks[indexPath.row].name as String!
-        let taskDate = taskMgr.tasks[indexPath.row].date as String!
-        let taskAndDate = String(format: "%-12 - %s", COpaquePointer(taskName.cStringUsingEncoding(NSUTF8StringEncoding)!), COpaquePointer(taskDate.cStringUsingEncoding(NSUTF8StringEncoding)!))
+        //let taskName = taskMgr.tasks[indexPath.row].name as String!
+        //let taskDate = taskMgr.tasks[indexPath.row].date as String!
+        //let taskAndDate = String(format: "%-12 - %s", COpaquePointer(taskName.cStringUsingEncoding(NSUTF8StringEncoding)!), COpaquePointer(taskDate.cStringUsingEncoding(NSUTF8StringEncoding)!))
             
         //cell.textLabel?.text = taskAndDate
         cell.textLabel?.text = taskMgr.tasks[indexPath.row].name
         cell.detailTextLabel?.text = taskMgr.tasks[indexPath.row].desc
-        cell.imageView?.image = UIImage(named: "first")
+        //cell.imageView?.image = UIImage(named: "first")
         
         
         return cell
