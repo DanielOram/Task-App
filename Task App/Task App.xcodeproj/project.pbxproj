@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF2D4E791C5F825E006E5A75 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2D4E781C5F825E006E5A75 /* TaskTableViewCell.swift */; };
 		EF33C38F1C59EDD700B06CE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF33C38E1C59EDD700B06CE9 /* AppDelegate.swift */; };
 		EF33C3911C59EDD700B06CE9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF33C3901C59EDD700B06CE9 /* FirstViewController.swift */; };
 		EF33C3931C59EDD700B06CE9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF33C3921C59EDD700B06CE9 /* SecondViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF2D4E781C5F825E006E5A75 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		EF33C38B1C59EDD700B06CE9 /* Task App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF33C38E1C59EDD700B06CE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF33C3901C59EDD700B06CE9 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				EF33C3991C59EDD700B06CE9 /* LaunchScreen.storyboard */,
 				EF33C39C1C59EDD700B06CE9 /* Info.plist */,
 				EF33C3BE1C59F15C00B06CE9 /* TaskManager.swift */,
+				EF2D4E781C5F825E006E5A75 /* TaskTableViewCell.swift */,
 			);
 			path = "Task App";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				EF33C3931C59EDD700B06CE9 /* SecondViewController.swift in Sources */,
 				EF33C38F1C59EDD700B06CE9 /* AppDelegate.swift in Sources */,
+				EF2D4E791C5F825E006E5A75 /* TaskTableViewCell.swift in Sources */,
 				EF33C3BF1C59F15D00B06CE9 /* TaskManager.swift in Sources */,
 				EF33C3911C59EDD700B06CE9 /* FirstViewController.swift in Sources */,
 			);
