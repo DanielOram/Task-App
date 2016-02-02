@@ -9,7 +9,14 @@
 import UIKit
 
 class TaskTableViewCell: UITableViewCell {
+    
+    //MARK: Properties
 
+    @IBOutlet weak var taskName: UILabel!
+    @IBOutlet weak var taskDesc: UILabel!
+    @IBOutlet weak var taskDate: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

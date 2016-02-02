@@ -32,12 +32,18 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    
 
     //MARK: tableview delegates
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return taskMgr.tasks.count
     }
 
+    
+    /*
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Default Tasks")
         
@@ -50,6 +56,29 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.detailTextLabel?.text = taskMgr.tasks[indexPath.row].desc
         //cell.imageView?.image = UIImage(named: "first")
         
+        
+        return cell
+    }
+    */
+    
+    //MARK: updated custom table cells
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "TaskTableViewCell"
+        
+        //Have to downcast cell to TaskTableViewCell else we won't see our custom cell!
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TaskTableViewCell
+        
+        // Configure the cell...
+        
+        
+        let task = taskMgr.tasks[indexPath.row]
+        
+        cell.taskName.text = task.name as String!
+        cell.taskDesc.text = task.desc as String!
+        cell.taskDate.text = task.date as String!
         
         return cell
     }
