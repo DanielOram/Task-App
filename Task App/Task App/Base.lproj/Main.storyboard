@@ -38,41 +38,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTk-tR-PAC">
-                                                    <rect key="frame" x="356" y="1" width="236" height="29"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="236" id="Itc-5r-3ol"/>
-                                                        <constraint firstAttribute="height" constant="29" id="XoV-qf-2sc"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqT-YE-Bf7">
-                                                    <rect key="frame" x="8" y="0.0" width="349" height="30"/>
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4w2-OU-Jfw">
-                                                    <rect key="frame" x="8" y="30" width="349" height="14"/>
+                                                    <rect key="frame" x="8" y="30" width="584" height="14"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" red="0.26363241792929293" green="0.26363241792929293" blue="0.26363241792929293" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTk-tR-PAC">
+                                                    <rect key="frame" x="438" y="0.0" width="154" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Ps4-gl-m6H"/>
+                                                        <constraint firstAttribute="width" constant="154" id="zNx-ZC-Lig"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="UqT-YE-Bf7" firstAttribute="top" secondItem="CQV-yo-smt" secondAttribute="topMargin" constant="-8" id="5GX-mv-fcG"/>
-                                                <constraint firstItem="iTk-tR-PAC" firstAttribute="leading" secondItem="CQV-yo-smt" secondAttribute="leadingMargin" constant="348" id="6aT-uk-37q"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="4w2-OU-Jfw" secondAttribute="trailing" constant="235" id="KFn-dK-aFK"/>
-                                                <constraint firstItem="iTk-tR-PAC" firstAttribute="trailing" secondItem="CQV-yo-smt" secondAttribute="trailingMargin" id="Py7-aJ-S2r"/>
-                                                <constraint firstItem="4w2-OU-Jfw" firstAttribute="top" secondItem="UqT-YE-Bf7" secondAttribute="bottom" id="Sku-s1-zYd"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="UqT-YE-Bf7" secondAttribute="trailing" constant="235" id="TE3-XB-dLY"/>
-                                                <constraint firstItem="UqT-YE-Bf7" firstAttribute="leading" secondItem="CQV-yo-smt" secondAttribute="leadingMargin" id="f20-lU-AZZ"/>
-                                                <constraint firstItem="iTk-tR-PAC" firstAttribute="top" secondItem="CQV-yo-smt" secondAttribute="topMargin" constant="-7" id="gRj-jC-lQg"/>
-                                                <constraint firstItem="iTk-tR-PAC" firstAttribute="trailing" secondItem="CQV-yo-smt" secondAttribute="trailingMargin" id="hYp-g8-ajL"/>
+                                                <constraint firstItem="UqT-YE-Bf7" firstAttribute="trailing" secondItem="CQV-yo-smt" secondAttribute="trailingMargin" id="0Sw-XD-Qv9"/>
+                                                <constraint firstItem="UqT-YE-Bf7" firstAttribute="top" secondItem="CQV-yo-smt" secondAttribute="topMargin" constant="-8" id="26x-6N-1By"/>
+                                                <constraint firstItem="iTk-tR-PAC" firstAttribute="top" secondItem="CQV-yo-smt" secondAttribute="topMargin" constant="-8" id="BqD-hB-PB3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4w2-OU-Jfw" secondAttribute="trailing" id="KFn-dK-aFK"/>
+                                                <constraint firstItem="iTk-tR-PAC" firstAttribute="trailing" secondItem="CQV-yo-smt" secondAttribute="trailingMargin" id="m1T-x8-XOl"/>
                                                 <constraint firstItem="4w2-OU-Jfw" firstAttribute="leading" secondItem="CQV-yo-smt" secondAttribute="leadingMargin" id="mr6-RW-Tzp"/>
-                                                <constraint firstItem="iTk-tR-PAC" firstAttribute="top" secondItem="CQV-yo-smt" secondAttribute="topMargin" constant="-7" id="yfh-Re-gth"/>
+                                                <constraint firstItem="UqT-YE-Bf7" firstAttribute="leading" secondItem="CQV-yo-smt" secondAttribute="leadingMargin" id="qT1-nX-2os"/>
+                                                <constraint firstItem="4w2-OU-Jfw" firstAttribute="top" secondItem="UqT-YE-Bf7" secondAttribute="bottom" id="sDf-wu-3Je"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
